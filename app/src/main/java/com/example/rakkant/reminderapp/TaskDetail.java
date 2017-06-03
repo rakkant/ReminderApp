@@ -38,11 +38,23 @@ public class TaskDetail extends AppCompatActivity {
 
     public void AfterClicked(View view) {
         String taskDescription = desc.getText().toString();
-        String text = mySpinner.getSelectedItem().toString();
 
         if (!taskDescription.isEmpty()) {
             Intent result = new Intent();
             result.putExtra(EXTRA_TASK_DESCRIPTION, taskDescription);
+            setResult(RESULT_OK, result);
+        } else {
+            setResult(RESULT_CANCELED);
+        }
+        finish();
+    }
+
+    public void AfterSelected(View view) {
+        String text = mySpinner.getSelectedItem().toString();
+
+        if (!text.contentEquals("Choose Amount")) {
+            Intent result = new Intent();
+            result.putExtra(EXTRA_TASK_DESCRIPTION, text);
             setResult(RESULT_OK, result);
         } else {
             setResult(RESULT_CANCELED);

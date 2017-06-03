@@ -40,7 +40,8 @@
         android:layout_above="@+id/descriptionText"
         android:layout_toRightOf="@+id/descriptionLabel"
         android:layout_toEndOf="@+id/descriptionLabel"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        />
 
 
 </RelativeLayout>

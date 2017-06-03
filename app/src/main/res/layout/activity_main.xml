@@ -32,7 +32,8 @@
         android:id="@+id/taskListview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/addTaskBtn"/>
+        android:layout_below="@+id/addTaskBtn"
+        />
 
     <Button
         android:id="@+id/reminderbtn"
@@ -48,5 +49,9 @@
         android:textStyle="bold"
         android:onClick="reminderClicked"
         android:layout_below="@+id/dateTimeTxt" />
+
+
+
+
 
 </RelativeLayout>

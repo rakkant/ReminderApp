@@ -26,13 +26,15 @@ public class MainActivity extends Activity {
 
     private ArrayList<String> taskList;
     private ArrayAdapter<String> taskAdapter;
+    ListView listview;
+
+
     private TextView DateTimeTxt;
 
     private final int ADD_TASK_REQUEST = 1;
     private BroadcastReceiver TimeReciever;
     private final String PREFS_TASKS = "tasks";
     private final String KEY_TASKS_LIST = "list";
-    private ListView listview;
 
     Button reminderbtn ;
 
@@ -56,7 +58,8 @@ public class MainActivity extends Activity {
         }
 
 
-        taskAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, taskList);
+
+        taskAdapter = createAdapter(new ArrayList<Task>());
         listview.setAdapter(taskAdapter);
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -136,7 +139,16 @@ public class MainActivity extends Activity {
 
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
+
+
     }
+
+
+    private ArrayAdapter<String> createAdapter(ArrayList<Task> books){
+        return new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, taskList);
+
+    }
+
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
