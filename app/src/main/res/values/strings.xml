@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Reminder app</string>
+    <string name="add_task">Add a task</string>
+    <string name="description">Enter task detail:</string>
+    <string name="done">Done</string>
+    <string name="alert_title">Task</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+</resources>

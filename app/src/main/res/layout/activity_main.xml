@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff4d1"
+
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/dateTimeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:padding="20dp"/>
+
+    <Button
+        android:id="@+id/addTaskBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/dateTimeTxt"
+        android:backgroundTint="#d1f3ff"
+        android:onClick="addTaskClicked"
+        android:padding="20dp"
+        android:text="add task"
+        android:textStyle="bold" />
+
+    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/taskListview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addTaskBtn"/>
+
+    <Button
+        android:id="@+id/reminderbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/taskListview"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@+id/addTaskBtn"
+        android:layout_toRightOf="@+id/addTaskBtn"
+        android:backgroundTint="#ffd1dc"
+        android:text="set alarm"
+        android:textStyle="bold"
+        android:onClick="reminderClicked"
+        android:layout_below="@+id/dateTimeTxt" />
+
+</RelativeLayout>
