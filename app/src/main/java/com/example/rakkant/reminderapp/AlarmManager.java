@@ -22,16 +22,14 @@ public class AlarmManager extends AppCompatActivity {
     android.app.AlarmManager alarmManager;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alarm_manager);
         alarmTimePicker = (TimePicker) findViewById(R.id.timePicker);
         alarmManager = (android.app.AlarmManager) getSystemService(ALARM_SERVICE);
     }
 
-    public void OnToggleClicked(View view)
-    {
+    public void OnToggleClicked(View view){
         long time;
         if (((ToggleButton) view).isChecked()){
             Toast.makeText(AlarmManager.this, "SET ALARM ON",Toast.LENGTH_LONG).show();
@@ -42,8 +40,8 @@ public class AlarmManager extends AppCompatActivity {
             pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
 
             time=(calendar.getTimeInMillis()-(calendar.getTimeInMillis()%60000));
-            if(System.currentTimeMillis()>time)
-            {
+            
+            if(System.currentTimeMillis()>time){
                 if (calendar.AM_PM == 0)  time = time + (1000*60*60*12);
                 else       time = time + (1000*60*60*24);
             }
