@@ -142,7 +142,7 @@ public class Todolist extends Activity {
     }
 
 
-    private ArrayAdapter<String> createAdapter(ArrayList<Task> books){
+    private ArrayAdapter<String> createAdapter(ArrayList<Task> tasks){
         return new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, taskList);
 
     }
