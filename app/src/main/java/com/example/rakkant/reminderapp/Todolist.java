@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 
-public class MainActivity extends Activity {
+public class Todolist extends Activity {
 
     private ArrayList<String> taskList;
     private ArrayAdapter<String> taskAdapter;
@@ -43,7 +43,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_todolist);
 
 
         DateTimeTxt = (TextView) findViewById(R.id.dateTimeTxt);
@@ -91,13 +91,13 @@ public class MainActivity extends Activity {
 
 
     public void addTaskClicked(View view) {
-        Intent intent = new Intent(MainActivity.this, TaskDetail.class);
+        Intent intent = new Intent(Todolist.this, TaskDetail.class);
         startActivityForResult(intent, ADD_TASK_REQUEST);
     }
 
     public void reminderClicked(View view){
 
-        Intent i=new Intent(MainActivity.this, AlarmManager.class);
+        Intent i=new Intent(Todolist.this, AlarmManager.class);
         startActivity(i);
 
     }
@@ -119,8 +119,7 @@ public class MainActivity extends Activity {
     }
 
     private void taskSelected(final int position) {
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
-
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Todolist.this);
         alertDialogBuilder.setTitle("Have you done it yet ?");
         alertDialogBuilder
                 .setMessage(taskList.get(position))
@@ -139,7 +138,6 @@ public class MainActivity extends Activity {
 
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
-
 
     }
 

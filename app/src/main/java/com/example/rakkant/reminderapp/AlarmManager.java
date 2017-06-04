@@ -56,7 +56,7 @@ public class AlarmManager extends AppCompatActivity {
     }
 
     public void backHome(View view){
-        Intent i=new Intent(AlarmManager.this, MainActivity.class);
+        Intent i=new Intent(AlarmManager.this, Todolist.class);
         startActivity(i);
     }
 }

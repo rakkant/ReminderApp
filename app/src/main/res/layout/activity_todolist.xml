@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#fff4d1"
 
-    tools:context=".MainActivity">
+    tools:context=".Todolist">
 
     <TextView
         android:id="@+id/dateTimeTxt"
